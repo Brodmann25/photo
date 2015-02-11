@@ -1,3 +1,5 @@
+
+
 body{
 	background: url(../images/nice.png);
 	padding: 0px;
@@ -48,15 +50,22 @@ h1{
 .languages li a:hover{
 	color: #e0e0e0;
 }
-.main li{
-	display: inline;
-	padding-right: 11%;
+
+ul {
+	text-align: justify;
+}
+ul::after {
+	width: 100%; 
+	display: inline-block; 
+	content: "."; 
+	visibility: hidden;}
+li {
+	display: inline-block;
 }
 
 .main a{
 	color: #9e9e9e;
-	font-size: 1.2em;
-}
+	}
 
 .main ul a:hover{
 	border-bottom: 4.5px solid #1c75ad; 
@@ -75,7 +84,6 @@ h1{
 }
 .main{
 	margin-top: 140px;
-	margin-bottom: 0.6%;
 }
 .social{
 	position: relative;
@@ -110,20 +118,34 @@ h1{
 .footer-text{
 	width: 80%;
 	margin: 0 auto;
+	min-width: 320px;
+	max-width: 1920px;
 }
 
 
-.footer-text{
-	text-align: justify;
-	}	
 
+@media screen and (min-width : 320px) and (max-width : 480px) {
+ .main li{
 
-.footer-text ul{
-	text-align: justify;
+ 	font-size: 0.7em;
+ }
 
+ 	h1{
+ 		font-size: 0.7em;
+ 	}
+ 	.languages {
+ 		font-size: 0.5em;
+ 	}
+
+ 	.logo{
+ 		margin-top: 10px;
+ 	}
+ 	.main{
+
+ 		margin-top: 10%;
+ 	}
+ 	.logo img{
+ 		width: 10%;
+ 	}
+ 
 }
-
-.footer-text ul li{
-display: inline;	
-}
-
